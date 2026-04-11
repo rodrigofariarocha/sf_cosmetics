@@ -1,0 +1,16 @@
+name,description,price,category,subcategory,stock,image_url,show_on_home
+"Champô Reconstrutor Abril Nature","Champô profissional para cabelos danificados com queratina.",18.90,cabelo,tratamento,50,,false
+"Coloração Permanente Abril Nature 7.0","Coloração profissional loiro médio natural.",12.50,cabelo,coloracao,100,,false
+"Batom Líquido Andreia Matte","Batom líquido de longa duração, acabamento matte.",14.90,maquiagem,labios,40,,true
+"Verniz Gel Andreia Professional","Verniz de gel profissional para unhas.",9.90,maquiagem,unhas,80,,false
+"Secador Profissional Babyliss Pro","Secador de cabelo 2200W com motor AC.",89.90,aparelhos,secadores,15,,true
+"Máquina de Corte JRL FreshFade","Máquina de corte profissional sem fio.",199.90,aparelhos,maquinas,10,,true
+"Creme Styling Bandido","Creme de styling para penteados modernos.",8.50,cabelo,styling,60,,false
+"Coloração Black Professional 1.0","Coloração profissional preto natural. Cobertura total.",11.90,cabelo,coloracao,120,,false
+"Tratamento Capilar DCM","Tratamento reparador intensivo para cabelos.",22.50,cabelo,tratamento,30,,false
+"Base Líquida Andreia Makeup","Base líquida com cobertura média e acabamento natural.",16.90,maquiagem,rosto,35,,true
+"Máscara Pestanas Andreia","Máscara de pestanas volume extremo.",12.50,maquiagem,olhos,45,,false
+"Sérum Capilar Exitenn","Sérum reparador com proteção térmica.",15.90,cabelo,tratamento,25,,false
+"Plancha Profissional Babyliss","Plancha de cabelo com placas de titânio.",79.90,aparelhos,planchas,12,,true
+"Loção Pós-Barba Ossion","Loção pós-barba refrescante para homem.",7.90,corpo,barbear,70,,false
+"Cera de Cabelo Bandido","Cera de fixação forte com acabamento mate.",6.90,cabelo,styling,80,,false
