@@ -195,5 +195,5 @@ Este projeto é privado e de uso exclusivo.
 ---
 
 <p align="center">
-  Feito com ☕ e dedicação — <strong>SF Cosmetics</strong>
+  Desenvolvido por <strong>Rodrigo Rocha</strong>
 </p>
