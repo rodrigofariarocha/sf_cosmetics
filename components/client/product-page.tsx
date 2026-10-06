@@ -7,20 +7,23 @@ import { Button } from "@/components/ui/button";
 import { Minus, Plus, ShoppingBag, Truck, ShieldCheck, Star, Heart, ChevronRight, Droplets } from "lucide-react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
-import { createClient } from "@/lib/supabase/client";
 import { ProductCard } from "@/components/product-card";
+import { LOCAL_PRODUCTS } from "@/lib/local-products";
 import { useCart } from "@/contexts/cart-context";
 import { useFavorites } from "@/contexts/favorites-context";
 
 export function ProductPage({ product }: { product: Product }) {
     const [quantity, setQuantity] = useState(1);
     const [selectedImage, setSelectedImage] = useState(0);
-    const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
     const [zoomPos, setZoomPos] = useState({ x: 50, y: 50 });
     const [isZooming, setIsZooming] = useState(false);
     const { addItem: addToCart } = useCart();
     const { addFavorite, removeFavorite, isFavorite } = useFavorites();
-    const supabase = createClient();
+
+    // Related products come from the local catalog (prototype)
+    const relatedProducts = LOCAL_PRODUCTS
+        .filter(p => p.category === product.category && p.id !== product.id)
+        .slice(0, 5);
 
     // Build image gallery from images array + image_url
     const allImages = (() => {
@@ -35,18 +38,8 @@ export function ProductPage({ product }: { product: Product }) {
     })();
 
     useEffect(() => {
-        const fetchRelated = async () => {
-            const { data } = await supabase
-                .from('products')
-                .select('*')
-                .eq('category', product.category)
-                .neq('id', product.id)
-                .limit(5);
-            if (data) setRelatedProducts(data);
-        };
-        fetchRelated();
         window.scrollTo(0, 0);
-    }, [product.id, product.category, supabase]);
+    }, [product.id]);
 
     const handleAddToCart = () => {
         for (let i = 0; i < quantity; i++) addToCart(product);

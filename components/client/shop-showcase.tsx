@@ -11,6 +11,7 @@ import { createClient } from "@/lib/supabase/client";
 import { Product, ContentBlock } from "@/types/shop";
 import { toast } from "sonner";
 import { ProductCard } from "@/components/product-card";
+import { LOCAL_PRODUCTS } from "@/lib/local-products";
 
 export function ShopShowcase() {
     const [products, setProducts] = useState<Product[]>([]);
@@ -22,15 +23,8 @@ export function ShopShowcase() {
 
     useEffect(() => {
         async function fetchData() {
-            // Fetch Products
-            const { data: pData } = await supabase
-                .from('products')
-                .select('*')
-                .eq('show_on_home', true)
-                .order('created_at', { ascending: false })
-                .limit(15);
-
-            if (pData) setProducts(pData);
+            // Products come from the local catalog (prototype)
+            setProducts(LOCAL_PRODUCTS.filter(p => p.show_on_home).slice(0, 15));
 
             // Fetch Highlights
             const { data: hData } = await supabase

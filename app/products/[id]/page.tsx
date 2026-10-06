@@ -1,20 +1,16 @@
-import { createClient } from "@/lib/supabase/client";
 import { ProductPage } from "@/components/client/product-page";
 import { Header } from "@/components/client/header";
 import { Footer } from "@/components/client/footer";
 import { notFound } from "next/navigation";
+import { LOCAL_PRODUCTS } from "@/lib/local-products";
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
-    const supabase = createClient();
 
-    const { data: product, error } = await supabase
-        .from('products')
-        .select('*')
-        .eq('id', id)
-        .single();
+    // Products come from the local catalog (prototype)
+    const product = LOCAL_PRODUCTS.find(p => p.id === id);
 
-    if (error || !product) {
+    if (!product) {
         notFound();
     }
 

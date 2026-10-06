@@ -4,6 +4,7 @@ import { useEffect, useState, useMemo } from "react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { Product } from "@/types/shop";
+import { LOCAL_PRODUCTS } from "@/lib/local-products";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -161,13 +162,10 @@ export default function CategoryPage() {
     useEffect(() => {
         async function fetchProducts() {
             setLoading(true);
-            let query = supabase.from('products').select('*');
-
-            if (categorySlug && categorySlug !== 'all') {
-                query = query.eq('category', categorySlug);
-            }
-
-            const { data, error } = await query;
+            // Products come from the local catalog (prototype)
+            const data: Product[] = categorySlug && categorySlug !== 'all'
+                ? LOCAL_PRODUCTS.filter(p => p.category === categorySlug)
+                : LOCAL_PRODUCTS;
 
             if (data) {
                 // Enrich data with subcategories for demo if missing in DB
