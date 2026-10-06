@@ -119,19 +119,18 @@ export default function AccountPage() {
                     .eq('id', user.id)
                     .single();
 
-                let profileData;
+                // Fallback to user metadata (used on error or when no profile row exists)
+                let profileData = {
+                    full_name: user.user_metadata.full_name || "",
+                    email: user.email || "",
+                    phone: user.user_metadata.phone || "",
+                    address: "",
+                    city: "",
+                    postal_code: "",
+                    newsletter_subscribed: false
+                };
                 if (error) {
                     console.error('Error fetching profile:', error);
-                    // Fallback to user metadata
-                    profileData = {
-                        full_name: user.user_metadata.full_name || "",
-                        email: user.email || "",
-                        phone: user.user_metadata.phone || "",
-                        address: "",
-                        city: "",
-                        postal_code: "",
-                        newsletter_subscribed: false
-                    };
                 } else if (data) {
                     profileData = {
                         full_name: data.full_name || "",
