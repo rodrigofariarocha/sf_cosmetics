@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-label="SF Cosmetics — Cosmetics and Beauty Studio">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3CF55"/>
+      <stop offset="0.5" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#AA8C2C"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.28" cy="0.5" r="0.55">
+      <stop offset="0" stop-color="#2a2412"/>
+      <stop offset="1" stop-color="#0a0a0a"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1280" height="360" fill="url(#glow)"/>
+  <rect x="24" y="24" width="1232" height="312" fill="none" stroke="url(#gold)" stroke-opacity="0.55" stroke-width="1"/>
+  <rect x="34" y="34" width="1212" height="292" fill="none" stroke="url(#gold)" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- Monograma -->
+  <g font-family="'Didot','Bodoni 72','Playfair Display',Georgia,'Times New Roman',serif" fill="url(#gold)">
+    <text x="190" y="205" font-size="190" text-anchor="middle">S</text>
+    <text x="252" y="282" font-size="190" text-anchor="middle">F</text>
+  </g>
+
+  <line x1="380" y1="110" x2="380" y2="250" stroke="url(#gold)" stroke-opacity="0.6"/>
+
+  <g font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif">
+    <text x="420" y="160" font-size="58" font-weight="600" fill="#FFFFFF" letter-spacing="10">SF COSMETICS</text>
+    <text x="422" y="204" font-size="24" fill="url(#gold)" letter-spacing="6">COSMETICS AND BEAUTY STUDIO</text>
+    <text x="422" y="252" font-size="18" fill="#A3A3A3" letter-spacing="1.5">Perfumaria árabe · Cosmética premium · Loja online com IA</text>
+  </g>
+
+  <!-- Frasco estilizado -->
+  <g transform="translate(1110 80) scale(0.9)" fill="none" stroke="url(#gold)" stroke-width="2">
+    <rect x="38" y="0" width="44" height="34" rx="4"/>
+    <rect x="50" y="34" width="20" height="16"/>
+    <rect x="0" y="50" width="120" height="160" rx="18"/>
+    <circle cx="60" cy="130" r="26" stroke-opacity="0.8"/>
+    <circle cx="60" cy="130" r="19" stroke-opacity="0.4"/>
+    <path d="M60 118 L68 130 L60 142 L52 130 Z" fill="url(#gold)" stroke="none"/>
+  </g>
+</svg>
