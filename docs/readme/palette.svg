@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="150" viewBox="0 0 1000 150" role="img" aria-label="Paleta de cores SF Cosmetics">
+  <g font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14">
+    <rect x="0" y="0" width="190" height="96" rx="10" fill="#D4AF37"/>
+    <text x="8" y="120" fill="#888">Gold</text><text x="8" y="140" fill="#888" font-weight="600">#D4AF37</text>
+
+    <rect x="202" y="0" width="190" height="96" rx="10" fill="#F3CF55"/>
+    <text x="210" y="120" fill="#888">Gold Light</text><text x="210" y="140" fill="#888" font-weight="600">#F3CF55</text>
+
+    <rect x="404" y="0" width="190" height="96" rx="10" fill="#AA8C2C"/>
+    <text x="412" y="120" fill="#888">Gold Dark</text><text x="412" y="140" fill="#888" font-weight="600">#AA8C2C</text>
+
+    <rect x="606" y="0" width="190" height="96" rx="10" fill="#0A0A0A"/>
+    <text x="614" y="120" fill="#888">Noir</text><text x="614" y="140" fill="#888" font-weight="600">#0A0A0A</text>
+
+    <rect x="808" y="0" width="190" height="96" rx="10" fill="#FAFAF8" stroke="#D4AF37" stroke-opacity="0.5"/>
+    <text x="816" y="120" fill="#888">Ivory</text><text x="816" y="140" fill="#888" font-weight="600">#FAFAF8</text>
+  </g>
+</svg>
